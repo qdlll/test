@@ -1,0 +1,746 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>一百点</title>
+<link href="css/style.css" rel="stylesheet">
+<style>
+a {
+    text-decoration: none;
+}
+</style>
+</head>
+<style>
+#msgDiv {
+	margin-left: -425px !important;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 30px;
+}
+.code_box {
+	width: 100% !important
+}
+#bgDiv {
+	position: fixed
+}
+#msgDiv1 {
+	margin-left: -425px; ! important;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 20px;
+}
+#msgDiv3 {
+	margin-left: -425px; ! important;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 20px;
+}
+.center_dialog {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 300px;
+	height: 320px;
+	margin: auto;
+	z-index: 10000;
+	display: none;
+}
+.close_share_dialog {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+#msgDiv {
+	z-index: 10001;
+	width: 850px;
+	height: 850px;
+	background: white;
+	border: #336699 1px solid;
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	font-size: 12px;
+	margin-left: -225px;
+	display: none;
+}
+#bgDiv {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: #000;
+	filter: progid:DXImageTransform.Microsoft.Alpha(style=3, opacity=25,
+		finishOpacity=75);
+	opacity: 0.6;
+}
+/*回复css*/
+.message {
+	border-radius: 6px;
+	border: 1px solid #d8d9dd;
+	margin: 0 30px 20px;
+}
+.message .top {
+	background: url(file:///C|/Users/ASUS/images/front/message.gif) 10px 9px no-repeat
+		#d8d9dd;
+	line-height: 50px;
+	text-indent: 54px;
+}
+.message .mid {
+	padding: 18px 23px;
+}
+.input {
+	position: relative;
+	padding-left: 90px;
+	padding-right: 120px;
+}
+.input img {
+	position: absolute;
+	left: 20px;
+	top: 0;
+}
+.input textarea {
+	width: 96%;
+	height: 110px;
+	padding: 10px;
+	border: 1px solid #d9d8dd;
+	resize: none;
+	border-radius: 4px;
+}
+.input .nums {
+	font-size: 16px;
+	margin: 15px 0;
+}
+.input .nums span {
+	float: left;
+}
+.input .nums ul {
+	display: inline-block;
+}
+.input .nums ul li {
+	background-color: ec8f8a;
+	color: #fff;
+	border-radius: 4px;
+	padding: 2px 10px;
+	margin: 0 8px;
+	cursor: pointer;
+}
+.input .nums ul li.active {
+	background-color: d91d14;
+}
+.input .nums a.btn {
+	color: #fff;
+	background-color: #d91d14;
+	display: block;
+	width: 117px;
+	line-height: 32px;
+	text-align: center;
+	border-radius: 6px;
+	margin-top: -4px;
+}
+.message-list {
+	margin-bottom: 20px
+}
+.message-list>li {
+	float: none;
+	border: 1px solid #d8d9dd;
+	border-radius: 4px;
+	background-color: #fff
+}
+.message-list li .mbody {
+	margin: 25px 30px 5px;
+}
+.message-list li .headImg {
+	margin-bottom: 5px;
+	display: block;
+}
+.voice {
+	margin: 5px 15px 10px;
+	line-height: 22px;
+}
+.message-list li .text-right {
+	color: #b1b1b1;
+	font-size: 12px;
+	position: relative;
+	padding-right: 24px;
+	margin-bottom: 11px;
+}
+.mIcon {
+	display: inline-block;
+	background: url(file:///C|/Users/Administrator/Desktop/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%20(8)/images/front/xtp_xq.png) 0px 0px no-repeat;
+	padding-left: 30px;
+	margin: 0 15px;
+}
+.message-list li .re {
+	font-size: 14px;
+	text-align: center;
+	display: inline-block;
+	line-height: 13px;
+	position: absolute;
+	right: 0;
+	top: -1px;
+}
+.message-list li li {
+	background-color: #f6f6f6;
+	padding: 10px 25px;
+	border-top: 1px solid #d8d9dd;
+	width: auto !important
+}
+.message-list li li .voice {
+	margin: 5px 55px 10px 15px;
+}
+.message-list li li .text-right {
+	padding-right: 60px;
+	margin-bottom: 0;
+}
+.row {
+	overflow: hidden
+}
+.col-1 {
+	width: 8.3333333333%;
+	float: left;
+}
+.col-11 {
+	width: 91.6666666%;
+	float: left;
+}
+.text-red {
+	color: #7fc1fe;
+}
+.text-right {
+	text-align: right;
+}
+.project_card_content {
+	width: auto
+	}
+#top li{
+	list-style:none;
+	margin:18px 20px;
+	float:left;
+	color:#000;
+	font-weight:bold;
+	font-size:18px;
+	height:30px;
+	line-height:15px;
+	padding:0 5px;
+	}
+li:hover{
+	border-bottom: 2px solid #f33;
+}
+#top{
+	text-align:center;
+	margin-left:520px;
+}
+.project_card {border: 1px solid #dedede}
+.project_card_content {padding:60px 30px 0 30px;width: 330px}
+.pb30{
+	
+	padding-bottom:30px;}
+.project_details_left {width: 1000px;}
+.clearfix{
+	margin: 0px 0px 30px 0px;
+}
+</style>
+<style>
+#enter{
+	float: left;
+	padding: 15px 15px 0px 10px;
+	text-decoration: none;
+	text-align: center;
+	height: 45px;
+	margin: 0px 0px 0px 100px;
+}
+#footer{
+	background-color:#000;
+	color:#FFF;
+	height:250px;
+	letter-spacing:5px;
+	clear:both;
+	line-height: 2px;
+}
+#footer1{
+	float: left;
+	margin: 5px 80px 0px 180px;
+	margin-left: 480px;
+}
+#footer2{
+	float: left;
+	margin: 15px 0px 0px 20px;
+	padding: 5px 0px 0px 20px;
+	width: 180px;
+	height: 240px;
+}
+#sign{
+	float: left;
+	width:400px;
+	text-align: right;
+	margin: 0px 50px 0px 50px;
+}
+#sss{ 
+    text-align:center
+}
+.header_wrap{
+	width:100%;
+    z-index:50;
+    background:#fff;
+}
+.header{
+	margin: 0 auto;
+	width:1100px;
+}
+.enter{
+	float: left;
+	padding: 40px 15px 0px 10px;
+	text-decoration: none;
+	text-align: center;
+	height: 65px;
+	margin: 0px 0px 0px 100px;
+}
+.header_wrap .header ul li a{
+	border:none;
+	display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    color: #666;
+}
+.container{
+	clear: both;
+	width: 100%;
+	background-color:#f5f5f5;;
+}
+/*尾部*/
+.footer{
+	color:#fff;
+	width:100%;
+	background-color: #000000;
+	height: 200px;
+	clear: both;
+}
+.footer1{
+    width:1100px;
+    background-color: #000000;
+    margin: 0 auto;
+    height: 200px;
+}
+.footer_left{
+	float: left;
+	width: 500px;
+	height: 180px;
+	margin: 10px 0 0 150px;
+}
+
+.footer_right{
+	margin: 30px 0 0 150px;
+	float: right;
+	width: 300px;
+	height: 150px;
+}
+</style>
+</head>
+<body>
+        <div class="header_wrap">
+           <div class="header">
+                <div style=" width: 185px; height: 60px; float: left;">
+                    <img src="image/sign.jpg" width="185px" height="45px" style="margin-top:35px;" />
+                </div>
+                <div style="width: 600px; height: 60px; float: left;">
+                     <ul class="main_nav">
+                      <li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;首页</a></li>
+                      <li><a href="invest1.html">店铺入驻</a></li>
+                      <li><a href="generalize.html">店铺推广</a></li>
+                      <li><a href="about us.html">关于我们</a></li>
+                    </ul>
+                </div>
+	            <div class="enter">
+				    <a href="log in index.html">
+				        <img src="image/enter.png" width="20px" height="20px"/>&nbsp;
+				        <font size="2" color="black" >登录  |</font>
+				    </a>
+				    <a href="register index.html">
+				        <font color="black" size="2"> 注册 </font>
+				    </a>                    
+	            </div>
+      		</div>
+        </div> 
+<div class="container">        
+<div class="w">
+    		<div id="top_height"></div>
+		<div style="width: 100%; height: 350px;">
+			<div style="width: 800px; height: 350px;float: left;">
+				<img src="image/ktv.jpg" width="750px" height="350px">
+			</div>
+			<div style="width: 170px; height: 350px; float: left;">
+				<p>
+					<b class="ib">梧州</b></span>
+				</p>
+				<p>
+					<h3 class="f20">百迪乐</h3>
+				</p>
+				<p class="f16 f999">
+					联系人：李先生
+				</p>
+				<p class="f16 f999">
+					电话：1387745235
+				</p>
+				<p>
+					开店地址：梧州市万秀区西江三路鸳江丽港8号楼
+				</p>
+				<br />
+				<p>
+					<a href="RG.html">
+						<button type="button" style="border: none;" class="rd_btn fl mr10" id="paySub">
+							认购
+						</button>
+					</a>
+				</p>
+			</div>
+		</div>
+        <!--<ul class="project_content project_list">
+            <li class="project_card mt10 clearfix bgWhite" style="float:right;list-style-type:none;">
+            <div class="project_card_content fr" style="width:170px;">
+					<div class="pb30">
+						<div class="clearfix pb30">
+							
+                            <b class="ib">梧州</b></span>
+							<h3 class="f20">百迪乐</h3>
+						</div>
+						<p class="f16 f999">梧州市万秀区西江三路鸳江丽港8号楼</p>
+					</div>
+
+	
+					
+					
+					<div class="clearfix">
+					
+
+
+							<button type="button" class="rd_btn fl mr10" id="paySub">认购</button>
+								
+					
+				
+	
+					</div>
+
+				</div>
+			</li><img src="image/ktv.jpg" width="850px" height="350px">
+		</ul>-->
+	
+	
+	
+		<div class="clearfix">
+			<div class="fl project_details_left">
+				<ul class="project_details_tab clearfix">
+					<li class="curr">店铺介绍</li>
+					<li>预算与退出</li>
+					
+				</ul>
+				<div class="project_details_content">
+					<!--店铺介绍-->
+					<div class="project_details_ininer">
+
+					 	 <br>
+						<div class="dashed_hr"></div>
+
+						<div class="pt20 pb20">
+                        <br /><br />
+							<p align="center"><font size="+4">【项目简介】</font></p>
+							<br />
+                            <div class="pt20">
+                          <!--插入图片-->
+                          <div id="sss">
+                        <p><img src="image/5.jpg" width="800px" /></p>
+                          <br />
+                          <div id="ccc"><p><font size="+2"><b>“佰迪乐KTV”</b></font></p>
+                         <p><font size="+2"><b>轻快舒适的包厢氛围</b></font></p>
+                          <p><font size="+2"><b>独特的装修风格极具艺术气息</b></font></p>
+                             <p><font size="+2"><b>风格迥异的主题包房</b></font></p>
+                              <p><font size="+2"><b>打造出与众不同的效果</b></font></p>
+                           <br />
+    <p align="center"><img src="image/2.jpg" width="800" /></p>
+                            <br />
+                            <p><font size="+2"><b>神奇的哆啦A梦</b></font></p>
+                             <p><font size="+2"><b>可爱的HelloKitty</b></font></p>
+                              <p><font size="+2"><b>阴森恐怖的万圣节风格</b></font></p>
+                               <p><font size="+2"><b>设计突出了时尚简洁的概念</b></font></p>
+                               <p><font size="+2"><b>力求达到至臻至美的效果</b></font></p>
+                               <br />
+                              <p><img src="image/1.jpg" width="800" /></p>
+                              <br />
+                                 <p><font size="+2"><b>休闲娱乐聚会空间</b></font></p>
+                                  <p><font size="+2"><b>创造绿色娱乐新风尚</b></font></p>
+                                   <p><font size="+2"><b>健康高雅的休闲娱乐形态</b></font></p>
+                                    <p><font size="+2"><b>高贵不贵的消费方式</b></font></p>
+                                     <p><font size="+2"><b>五星级的服务及硬件设备</b></font></p>
+                                     <br />
+                                     <p><img src="image/4.jpg" width="800" /></p>
+                                     <br />
+                                     <p><font size="+2"><b>它是一种生活态度</b></font></p>
+                                     <p><font size="+2"><b>一种生活理念</b></font></p>
+                                     <p><font size="+2"><b>一种生活方式</b></font></p>
+                       <p><font size="+2"><b>更是一种可以解除身心疲惫的最佳娱乐场所</b></font></p>
+                       <br />
+                       <img src="image/6.jpg" width="800" />              
+                                     
+                                     </div>
+                                     </div>
+                                   <br />
+                                   <br /> 
+                                   <br />
+                                    <br />
+                                     <br />
+                                      <br />
+                              <p align="center"><font size="+4">【综合评估】</font></p>
+                              <img src="image/7.jpg" width="875" />
+                                     
+                                     
+                                     
+                                     
+                                     
+                          <br /> <br /> <br /> <br /> <br /> <br /><br />
+                          
+                          <p align="center"><font size="+4">【加盟条件】</font></p>
+                          <font size="+2">1、加盟商必须要认同佰迪乐KTV招商品牌的理念，并且接受佰迪乐KTV全套经营模式。
+                          <br />
+　　<br />2、加盟商必须满足一定的资质，必须踏实肯干、吃苦耐劳，有创业热情，有一定的经商能力和管理、协调能力，有志向共同发展壮大佰迪乐KTV事业。
+<br />
+　<br />3、作为佰迪乐KTV加盟商，一定要服从总部的安排，服从佰迪乐KTV招商总部的管理，并且有良好商业信誉。
+<br />　
+　<br />4、自备经营场所，营业面积达5平米以上。
+<br />　　
+<br />5、资金方面非常重要，充足资金是创业的必备，同时，佰迪乐KTV加盟商要对佰迪乐KTV事业有充分的热情。</font>
+                         
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                            
+                            
+                      
+                            
+                            
+                            <br /><br /><br /><br /><br /><br />
+                          <img src="image/FX.PNG" width="950px" height="150px"/>  
+                           
+                            
+                            
+                            
+                            
+                            
+                            </div>
+						</div>
+					</div>
+					<!--预算与退出-->
+					<div class="project_details_ininer" style="display: none;">
+
+			
+
+						<div class="store-info">
+
+							<dl class="pb20">
+								<dt class="dashed_title">
+
+									<h3>开店计划</h3>
+								</dt>
+								<dd class="pt20 pb20">
+									<table width="100%" class="project_table">
+										<tbody>
+											<tr>
+												<th align="right" width="160">预期融资开店数量：</th>
+												<td>${info.financingShop}(家)</td>
+												<th align="right">开店筹备时间周期：</th>
+												<td>${info.shopArrangeTime}(天)</td>
+											</tr>
+											<tr>
+												<th align="right">店面地址：</th>
+												<td colspan="3">${info.shopAddress}</td>
+											</tr>
+											<tr>
+												<th align="right">开业时间：
+												</th>
+												<td colspan="3">${info.startShopTime}</td>
+											</tr>
+											<tr>
+												<th align="right">分红时间：<br>(项目开业后)&nbsp;
+												</th>
+												<td colspan="3">开业后每${info.dividendTime}天分红一次</td>
+											</tr>
+											<tr>
+												<th align="right">第一年预计盈利：<br>(项目开业后)&nbsp;
+												</th>
+												<td colspan="3"><fmt:formatNumber pattern="0.00"
+														value="${info.oneYearGain}" /><b class="ml5">元</b></td>
+											</tr>
+											<tr>
+												<th align="right" valign="top">其他计划：</th>
+												<td colspan="3">${info.other}</td>
+											</tr>
+										</tbody>
+									</table>
+								</dd>
+							</dl>
+
+						</div>
+
+
+
+
+
+						<div>
+
+
+							<dl class="pb20">
+								<dt class="dashed_title">
+
+									<h3>融资需求</h3>
+								</dt>
+								<dd class="pt20 pb20">
+									<table width="100%" class="project_table">
+										<tbody>
+											<tr>
+												<th align="right" width="160">开店融资金额：</th>
+												<td colspan="3">${info.collectAmountStr2}<b class="ml5">元</b></td>
+											</tr>
+											<tr>
+												<th align="right">项目总份数：</th>
+												<td colspan="3">${stockRight.buyNum}<b class="ml5">份</b></td>
+											</tr>
+											<tr>
+												<th align="right">每人限购份数：</th>
+												<td colspan="3">${stockRight.allowBuyNum}<b class="ml5">份</b></td>
+											</tr>
+											<tr>
+												<th align="right">个人最低投资金额：</th>
+												<td colspan="3">${stockRight.leastInvest}<b class="ml5">元</b></td>
+											</tr>
+											<tr>
+												<th align="right">项目方出资金额：</th>
+												<td>${info.ownFundingStr}<b class="ml5">元</b></td>
+												<th align="right">投资人出资金额：</th>
+												<td>${stockRight.investFundingStr}元</td>
+											</tr>
+											<tr>
+												<th align="right">项目方出资所占比例：</th>
+												<td>${stockRight.ownFundingRate}%</td>
+												<th align="right">投资人出资比例：</th>
+												<td>${stockRight.investFundingRate}%</td>
+											</tr>
+											<tr>
+												<th align="right">项目方收益所占比例：</th>
+												<td>${stockRight.ownEarningRate}%</td>
+												<th align="right">投资人收益比例：</th>
+												<td>${stockRight.investEarningRate}%</td>
+											</tr>
+										</tbody>
+									</table>
+								</dd>
+							</dl>
+
+
+						</div>
+
+
+						<dl class="pb20">
+							<dt class="dashed_title">
+
+								<h3>退出机制</h3>
+							</dt>
+							<dd class="pt20 pb20">
+								<table width="100%" class="quit_project_table">
+									<thead>
+										<tr>
+											<th width="25%" align="center">提出方发生条件与解决机制状况类型</th>
+											<th width="25%" align="center">份额股转让</th>
+											<th align="center">份额股回购</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th align="center">有限合伙人</th>
+											<td>${info.shareTurnWay}</td>
+											<td>${info.shareBuyWay}</td>
+										</tr>
+										<tr>
+											<th align="center">普通合伙人</th>
+											<td colspan="2">${info.exitTip}</td>
+										</tr>
+									</tbody>
+								</table>
+							</dd>
+						</dl>
+
+
+
+
+
+
+
+					</div>
+				
+				
+
+                   			
+					</div>
+				</div>
+       </div>
+			
+		
+		
+
+	
+    
+    
+			<div class="msg_card mt30" style="width: 1000px;" id="msg">
+				<h3>留言</h3>
+				<div class="msg_card_inner">
+					<form method="" action="">
+						<textarea rows="8" class="textarea" placeholder="您可以留言，也可以约谈" id="commentContent">
+							
+						</textarea>
+						<div class="pt20 pl30 pr30 clearfix" style="margin-top: 5px;">
+							<button type="button" class="fr m_blue_btn" onclick="comment('${info.id }');">
+								提交
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+</div>				
+</div>
+<div style="width: 100%;height: 50px; margin-top: -20px; background-color: #f5f5f5;z-index: -10;">
+	
+</div>
+	<div  class="footer">
+		<div class="footer1">
+			<div class="footer_left">
+				 <p ><font size="5">联系我们</font></p> 
+			     <p>在线咨询:9:00——17：30</p>
+			     <p>客服热线：400-286-4579</p>
+			     <p>官方客服微信号:littleboy13769</p>			   
+			</div>
+			
+			<div class="footer_right">
+			     <img src="image/QR code.jpg"width="100px" height="100px" /><br /><br />
+			     <font>微信公众号</font>
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
