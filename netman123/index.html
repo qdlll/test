@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			min-width: 1535px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		/*导航栏*/
+		
+		.head{
+			width: 100%;
+			height: 86px;
+			/*border: 1px solid red;*/
+		}
+		.head .right{
+		    height: 55px;
+		    width: 800px;
+			/*border: 1px solid green;*/
+			margin-left: 660px;
+			padding-top: 30px;
+		}
+		.head .right ul li{
+			list-style: none;
+			float: left;
+			padding: 0px 18px;
+			line-height: 60px;
+		}
+		.head .right ul li a{
+			text-decoration: none;
+			font-size: 14px;
+			color:#000000;
+		}
+		.head .right ul li a:hover{
+			color: #178ef4;
+		}
+		.head .logo{
+			/*border: 1px solid yellow;*/
+			float: left;
+			width: 218px;
+			height: 54px;
+			margin-left: 250px;
+			margin-top: 20px;
+			background: url(img/logo.png);
+		}
+		/*内容*/
+		.content{
+			width: 100%;
+			/*border: 1px solid magenta;*/
+		}
+		
+		/*轮播图*/
+		.content .Carousel{
+			width: 100%;
+			height: 420px;
+			/*border: 1px solid brown;*/
+			background: url(img/header40.jpg) no-repeat center/100% 100%;
+			position: relative;
+			
+		}
+	
+		.content .Carousel .c_left{
+			margin-left: 200px;
+			padding: 80px 0px 0px 70px;
+			width: 500px;
+			height: 300px;
+			/*border: 1px solid sandybrown;*/
+		}
+		.content .Carousel .c_left>span{
+			color: white;
+			display: block;
+			font-size: 30px;
+			font-weight: 700;
+		}
+		.content .Carousel .c_left>p{
+			color: white;
+			font-size: 14px;
+			font-weight: 700;
+		}
+		.content .Carousel .c_left .bgButton>a{
+			display: block;
+			color: 	#F5F5F5;
+			text-decoration: none;
+			text-align: center;
+			line-height: 40px;
+			background-color:#444444;
+			border-radius: 5px;
+			width: 110px;
+			height: 40px;		
+			
+		}
+		.content .Carousel .c_left .bgButton a:hover{
+			background-color: #00BFFF;
+			 transition: 0.5s;  /*css3过渡:时间*/
+		}
+		.content .Carousel .c_left .bgButton{
+			width: 110px;
+			height: 40px;
+			background: rgba(0,0,0,.3);
+			border-radius: 5px;
+			border: 1px solid #222;
+			margin: 70px 0px 0px 300px;
+			padding: 5px;
+		}	
+		
+		.content .Carousel .c_right{
+			width: 400px;
+			height: 340px;
+			/*border: 1px solid hotpink;*/
+			background: url(img/2.png);
+			position: absolute;
+			top: 55px;
+			right: 340px;
+		}
+		
+		.content .content2{
+			margin: 120px auto 0px;
+			width: 960px;
+			height: 50px;
+			/*border: 1px solid darkgoldenrod;*/
+		}
+		.content .content2>span{
+			display: block;
+			float: left;
+		}
+		
+		.content .content3{
+			width: 960px;
+			height: 300px;
+			/*border: 1px solid #00FFFF;*/
+			margin: 0px auto;
+		
+		}
+		.content .content3 .content3_array{
+			width: 290px;
+			height: 100px;
+			/*border: 1px solid firebrick;*/
+			float: left;
+			margin: 20px 0px 0px 27px;
+		}
+		.content .content3 .content3_array ul li{
+			list-style: none;
+			float: left;
+			font-size: 14px;
+		}
+		
+		
+		.content4{
+			width: 1000px;
+			height: 680px;
+			/*border: 1px solid #214FA3;*/
+			margin: 0 auto;
+		}
+		.content .content4 .content4_array{
+			width: 425px;
+			height: 210px;
+			/*border: 1px solid gold;*/
+			
+			padding: 40px 0px 0px 40px;
+			margin: 40px 0px 0px 20px;
+			float: left;
+		}
+		
+		/*背景图*/
+		.content .content4 .img1{
+			background: url(img/info_bg1.png) no-repeat center/100% 100%;
+		}
+		.content .content4 .img2{
+			background: url(img/info_bg2.png) no-repeat center/100% 100%;
+		}
+		.content .content4 .img3{
+			background: url(img/info_bg3.png) no-repeat center/100% 100%;
+		}
+		.content .content4 .img4{
+			background: url(img/info_bg4.png) no-repeat center/100% 100%;
+		}
+		
+		.content .content4 .content4_array p{
+			font-size: 16px;
+			font-weight: bold;
+			font-family: "微软雅黑";
+			color: #178ef4;
+			margin-bottom: 20px;
+		}
+		.content .content4 .content4_array ul li{
+			font-size: 14px;
+			font-weight: bold;
+			line-height: 30px;
+			margin-left: 20px;
+		}
+		.content .content4 .content4_array span{
+			font-size: 12px;
+			display: block;
+			color: #178ef4;
+			margin-top: 40px;
+			
+		}
+		
+		/*底部*/
+		.footer{
+			width: 100%;
+			height: 355px;
+			/*border: 1px solid darkgoldenrod;*/
+			background-color: #15588c;
+		}
+		.footer .ftUpper{
+			width: 1200px;
+			height: 300px;
+			/*border: 1px solid goldenrod;*/
+			margin: 0 auto;
+			color: white;
+		}
+		.footer .ftUpper ul{
+			float: left;
+			margin: 60px 0px 0px 110px;
+		}
+		.footer .ftUpper ul li{
+			list-style: none;
+			line-height: 30px;
+			font-size: 12px;
+		}
+		
+		.ftLower{
+			width: 100%;
+			height: 55px;
+			border-top: 1px solid #548cb8;
+		}
+		.ftLower p{
+			color: white;
+			text-align: center;
+			font-size: 12px;
+			line-height: 55px;
+		}
+	</style>
+	<body>
+		<!--头部-->
+		<div class="head">		
+				<div class="logo">
+					
+				</div>
+				<div class="right">
+					<ul>
+						<li><a href="#">首页</a></li>
+						<li><a href="#">软件注册</a></li>
+						<li><a href="#">下载中心</a> </li>
+						<li><a href="#">技术支持</a></li>
+						<li><a href="#">在线购买</a></li>
+						<li><a href="#">新闻资讯</a></li>
+						<li><a href="#">关于我们</a></li>
+					</ul>
+			    </div>
+		</div>
+		<!--内容-->
+		<div class="content">
+			<div class="Carousel">
+				<div class="c_left">
+					<span>网络人远程控制软件个人版</span>
+					<br />
+					<p>免费使用,活动兑换不同期限</p>	
+					<div class="bgButton">
+						<a href="#">立即下载</a>
+					</div>
+				</div>
+				<div class="c_right">
+					
+				</div>
+			</div>
+			<div class="content2">
+				<span><img src="img/t1.png"/></span>
+				<span><img src="img/t2.png"/></span>
+				<span><img src="img/t3.png"/></span>
+			</div>
+			<div class="content3">
+				<div class="content3_array">
+					<ul>
+						<li><img src="img/cap1.jpg" /></li>
+						<li style="padding: 21px 0px 0px 20px;">
+							<p><b>监控系统</b></p>
+							<p>监视、控制被监控电脑屏幕</p>
+						</li>
+					</ul>
+				</div>
+				<div class="content3_array">
+					<ul>
+						<li><img src="img/cap2.jpg" /></li>
+						<li style="padding: 21px 0px 0px 20px;">
+							<p><b>远程文件管理</b></p>
+							<p>远程上传下载被监控电脑文件</p>
+						</li>
+					</ul>
+				</div>
+				<div class="content3_array">
+					<ul>
+						<li><img src="img/cap3.jpg" /></li>
+						<li style="padding: 21px 0px 0px 20px;">
+							<p><b>屏幕定时录像</b></p>
+							<p>无需在线录制被监控电脑</p>
+						</li>
+					</ul>
+				</div>
+				<div class="content3_array">
+					<ul>
+						<li><img src="img/cap4.jpg" /></li>
+						<li style="padding: 21px 0px 0px 20px;">
+							<p><b>视频墙</b></p>
+							<p>打开多个被监控电脑摄像头</p>
+						</li>
+					</ul>
+				</div>
+				<div class="content3_array">
+					<ul>
+						<li><img src="img/cap5.jpg" /></li>
+						<li style="padding: 21px 0px 0px 20px;">
+							<p><b>屏幕墙</b></p>
+							<p>同时监控多个被监控电脑操作</p>
+						</li>
+					</ul>
+				</div>
+				<div class="content3_array">
+					<ul>
+						<li><img src="img/cap6.jpg" /></li>
+						<li style="padding: 21px 0px 0px 20px;">
+							<p><b>远程开关机</b></p>
+							<p>软件、硬件远程开关电脑</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="content4">
+				<div class="content4_array img1">
+					<p>网络人远程控制软件软件特色</p>
+					<ul>
+						<li>内网穿透，远程控制无需IP</li>
+						<li>子账号设置，多对多远程控制</li>
+						<li>离线屏幕录像无需值守监控</li>
+					</ul>
+					<span>了解网络人远程控制软件功能详情>></span>
+				</div>
+				<div class="content4_array img2">
+					<p>网络人远程控制软件解决方案</p>
+					<ul>
+						<li>网络人登陆不上服务器解决方案</li>
+						<li>家庭用户使用网络人远程控制软件远程的解决方案</li>
+						<li>网灵一号受控端隐藏怎么设置？网络人教你</li>
+					</ul>
+					<span>更多网络人控制软件解决方案>></span>
+				</div>
+				<div class="content4_array img3">
+					<p>网络人远程控制软件软件特色</p>
+					<ul>
+						<li>内网穿透，远程控制无需IP</li>
+						<li>子账号设置，多对多远程控制</li>
+						<li>离线屏幕录像无需值守监控</li>
+					</ul>
+					<span>了解网络人远程控制软件功能详情>></span>
+				</div>
+				<div class="content4_array img4">
+					<p>网络人远程控制软件软件特色</p>
+					<ul>
+						<li>内网穿透，远程控制无需IP</li>
+						<li>子账号设置，多对多远程控制</li>
+						<li>离线屏幕录像无需值守监控</li>
+					</ul>
+					<span>了解网络人远程控制软件功能详情>></span>
+				</div>
+			</div>
+		</div>
+		<!--底部-->	
+		<div class="footer">
+			<div class="ftUpper">
+				<ul>
+					<h4>产品中心</h4>
+					<br />
+					<li>网络人远程控制软件</li>
+					<li>掌控局域网监控软件</li>
+					<li>网络人防盗监控摄像机</li>
+					<li>关机王定时关机软件</li>
+					<li>U速启PE装系统工具</li>
+					<li>查看更多</li>
+				</ul>
+				<ul>
+					<h4>新闻资讯</h4>
+					<br />
+					<li>主机控制多台电脑的方</li>
+					<li>哪些软件可以远程控制</li>
+					<li>文件共享用什么软件？</li>
+					<li>远程控制电脑怎么设</li>
+					<li>远程电脑什么工具最</li>
+					<li>查看更多</li>
+				</ul>
+				<ul>
+					<h4>商城购买</h4>
+					<br />
+					<li>网络人企业旗舰版购买</li>
+					<li>网络人旗舰旗舰版续费</li>
+					<li>掌控局域网监控版购买</li>
+					<li>网络人监控摄像机购买</li>
+					<li>网络人车载定位器购买</li>
+					<li>查看更多</li>
+				</ul>
+				<ul>
+					<h4>联系我们</h4>
+					<br />
+					<li>电话：0771-3838457</li>
+					<li>0771-3838454</li>
+					<li>手机：13377196315</li>
+					<li>Q Q：800003655</li>
+					<li>微信：netman_cpcl</li>
+					<li>邮箱：kefu@netman123.cn</li>
+				</ul>
+			</div>
+			<div class="ftLower">
+				<p>版权所有:南宁网络人电脑有限公司 Copyright©2008-2016All Rights Reserved 备案号:桂ICP备08000748号-1 网站举报电话：0771-3838454 |举报邮箱：182551782@qq.com|网站举报工作负责人：陈经理|联系方式：13377196315</p>
+			</div>
+		</div>
+	</body>
+</html>
