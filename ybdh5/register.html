@@ -6,41 +6,6 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script language="JavaScript">
-    	function check(){
-    		var userNameId=document.getElementById("userNameId").value;
-//  		if(userNameId.length==0 || userNameId.length>4){
-//  			document.getElementById("nameDiv").innerHTML="真实姓名不能为空且不能大于四位";
-//  			return false;
-			if(userNameId.length==0 || userNameId.length>4){
-				alert("真实姓名不能为空且不能大于四位");
-				return false;
-    		}
-    		var phoneNumberId=document.getElementById("phoneNumberId").value;
-    		if(phoneNumberId.length==0){
-    			alert("手机号不能为空");
-    			return false;
-    		}
-    		if(phoneNumberId.length!=11){
-    			alert("手机号必须是11位");
-    			return false;
-    		}
-    		if(isNaN(phoneNumberId)){
-    			alert("手机号必须是11位数字");
-    			return false;
-    		}
-    		var passwordId=document.getElementById("passwordId").value;
-    		if(passwordId.length==0){
-    			alert("密码不能为空");
-    			return false;
-    		}
-    		var affirmPasswordId=document.getElementById("affirmPasswordId").value;
-    		if(affirmPasswordId!=passwordId){
-    			alert("再次输入密码不一致");
-    			return false;
-    		}
-    	}
-    </script>
 </head>
 <body class="body_bg">
     <div id="wrap">
@@ -54,33 +19,33 @@
                 <li class="flexItem curr">投资方</li>
                 <li class="flexItem">项目方</li>
             </ul>
-            <form method="post" action="register.php" class="mt10 bg_white" onsubmit="return check()">
-                <div id="tab_content">
+            <form method="" action="" class="mt10 bg_white">
+                <div id="tab_content" style="{background-color:expression((this.sectionRowIndex%2==0)?"red":"blue")">
                   <!--投资方-->
                   <ul class="login_form">
                     <li class="flexbox">
                         <span class="flexCenter"><i class="user_ico"></i></span>
-                        <div class="flexItem"><input class="w100p" type="text" placeholder="真实姓名(必填)" name="userName" id="userNameId"></div> 
+                        <div class="flexItem"><input class="w100p" type="text" placeholder="真实姓名(必填)"></div>
                     </li>
                     <li class="flexbox">
                         <span class="flexCenter"><i class="phone_ico"></i></span>
-                        <div class="flexItem"><input class="w100p" type="tel" placeholder="手机号(必填)" name="phoneNumber" id="phoneNumberId"></div>
+                        <div class="flexItem"><input class="w100p" type="tel" placeholder="手机号(必填)"></div>
                     </li>
                     <li class="flexbox">
                         <span class="flexCenter"><i class="pwd_ico"></i></span>
                         <div class="flexItem">
-                            <input class="w100p" type="password" placeholder="密码(必填)" name="password" id="passwordId">
+                            <input class="w100p" type="password" placeholder="密码(必填)">
                         </div>
                     </li>
                     <li class="flexbox">
                         <span class="flexCenter"><i class="pwd_ico"></i></span>
                         <div class="flexItem">
-                            <input class="w100p" type="password" placeholder="再次输入密码(必填)" name="affirmPassword" id="affirmPasswordId">
+                            <input class="w100p" type="password" placeholder="再次输入密码(必填)">
                         </div>
                     </li>
                     <li class="flexbox">
                         <span class="flexCenter"><i class="user_ico"></i></span>
-                        <div class="flexItem"><input class="w100p" type="text" placeholder="推荐人(手机/email)" name="referrer"></div>
+                        <div class="flexItem"><input class="w100p" type="text" placeholder="推荐人(手机/email)"></div>
                     </li>
                     <!-- <li class="flexbox">
                         <div class="flexItem pl20">
