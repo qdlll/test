@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>一百点触屏版</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script language="JavaScript">
+    	function check(){
+    		var userNameId=document.getElementById("userNameId").value;
+//  		if(userNameId.length==0 || userNameId.length>4){
+//  			document.getElementById("nameDiv").innerHTML="真实姓名不能为空且不能大于四位";
+//  			return false;
+			if(userNameId.length==0 || userNameId.length>4){
+				alert("真实姓名不能为空且不能大于四位");
+				return false;
+    		}
+    		var phoneNumberId=document.getElementById("phoneNumberId").value;
+    		if(phoneNumberId.length==0){
+    			alert("手机号不能为空");
+    			return false;
+    		}
+    		if(phoneNumberId.length!=11){
+    			alert("手机号必须是11位");
+    			return false;
+    		}
+    		if(isNaN(phoneNumberId)){
+    			alert("手机号必须是11位数字");
+    			return false;
+    		}
+    		var passwordId=document.getElementById("passwordId").value;
+    		if(passwordId.length==0){
+    			alert("密码不能为空");
+    			return false;
+    		}
+    		var affirmPasswordId=document.getElementById("affirmPasswordId").value;
+    		if(affirmPasswordId!=passwordId){
+    			alert("再次输入密码不一致");
+    			return false;
+    		}
+    	}
+    </script>
+</head>
+<body class="body_bg">
+    <div id="wrap">
+        <header id="header">
+            <a href="javascript:history.go(-1);" class="go_back"></a>
+            <h1>创建账号</h1>
+            <a href="login.html" class='header_right'>登录</a>
+        </header>
+        <div id="content"> 
+            <ul class="ui_tab flexbox mt10" id="tab">
+                <li class="flexItem curr">投资方</li>
+                <li class="flexItem">项目方</li>
+            </ul>
+            <form method="post" action="register.php" class="mt10 bg_white" onsubmit="return check()">
+                <div id="tab_content">
+                  <!--投资方-->
+                  <ul class="login_form">
+                    <li class="flexbox">
+                        <span class="flexCenter"><i class="user_ico"></i></span>
+                        <div class="flexItem"><input class="w100p" type="text" placeholder="真实姓名(必填)" name="userName" id="userNameId"></div> 
+                    </li>
+                    <li class="flexbox">
+                        <span class="flexCenter"><i class="phone_ico"></i></span>
+                        <div class="flexItem"><input class="w100p" type="tel" placeholder="手机号(必填)" name="phoneNumber" id="phoneNumberId"></div>
+                    </li>
+                    <li class="flexbox">
+                        <span class="flexCenter"><i class="pwd_ico"></i></span>
+                        <div class="flexItem">
+                            <input class="w100p" type="password" placeholder="密码(必填)" name="password" id="passwordId">
+                        </div>
+                    </li>
+                    <li class="flexbox">
+                        <span class="flexCenter"><i class="pwd_ico"></i></span>
+                        <div class="flexItem">
+                            <input class="w100p" type="password" placeholder="再次输入密码(必填)" name="affirmPassword" id="affirmPasswordId">
+                        </div>
+                    </li>
+                    <li class="flexbox">
+                        <span class="flexCenter"><i class="user_ico"></i></span>
+                        <div class="flexItem"><input class="w100p" type="text" placeholder="推荐人(手机/email)" name="referrer"></div>
+                    </li>
+                    <!-- <li class="flexbox">
+                        <div class="flexItem pl20">
+                            <input class="w100p" type="password" placeholder="输入右边字母">
+                        </div>
+                        <div class="flexCenter"><img class="code_photo" src="images/code.png"><a href="javascript:;" class="c999 f10">换一张</a></div>
+                    </li> -->
+                    <li class="flexbox">
+                        <div class="flexItem pl20"><input class="w100p" type="text" placeholder="手机验证码"></div>
+                        <div class="flexCenter"><button type="button" class="small_btn blue_btn">获取验证码</button></div>
+                    </li>
+                  </ul>
+                  <!--项目方-->
+                  <ul class="login_form" style="display:none">
+                    <li class="flexbox">
+                        <span class="flexCenter"><i class="user_ico"></i></span>
+                        <div class="flexItem"><input class="w100p" type="text" placeholder="企业名称(必填)"></div>
+                    </li>
+                    <li class="flexbox">
+                        <span class="flexCenter"><i class="user_ico"></i></span>
+                        <div class="flexItem"><input class="w100p" type="text" placeholder="真实姓名(必填)"></div>
+                    </li>
+                    <li class="flexbox">
+                        <span class="flexCenter"><i class="phone_ico"></i></span>
+                        <div class="flexItem"><input class="w100p" type="tel" placeholder="手机号(必填)"></div>
+                    </li>
+                    <li class="flexbox">
+                        <span class="flexCenter"><i class="pwd_ico"></i></span>
+                        <div class="flexItem">
+                            <input class="w100p" type="password" placeholder="密码(必填)">
+                        </div>
+                    </li>
+                    <li class="flexbox">
+                        <span class="flexCenter"><i class="pwd_ico"></i></span>
+                        <div class="flexItem">
+                            <input class="w100p" type="password" placeholder="再次输入密码(必填)">
+                        </div>
+                    </li>
+                    <li class="flexbox">
+                        <div class="flexItem pl20"><input class="w100p" type="text" placeholder=""手机验证码""></div>
+                        <div class="flexCenter"><button type="button" class="small_btn blue_btn">获取验证码</button></div>
+                    </li>
+                  </ul>
+                </div>
+                <aside class="p10">
+                      <p class="pb20">
+                        <label class="form_checkbox"><input checked="" type="checkbox"><i></i><b class="c_blue">* 我已阅读并同意</b></label>
+                        <a href="#">《认证投资人使用协议》</a>
+                      </p>
+                      <ul class="flexbox btn_group">
+                          <li class="flexItem"><button type="submit" class="btn blue_btn w100p">立即注册</button></li>
+                      </ul>
+                  </aside>
+            </form>
+        </div>
+    </div>
+
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+    tabUI('#tab>li','curr','#tab_content');
+</script>
+</body>
+</html>

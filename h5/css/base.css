@@ -1,0 +1,228 @@
+/**
+    * small sea
+    * 基础css
+*/
+
+/*=======CSS reset start=======*/
+html {font-size:62.5%;}
+html,body{width:100%;height:100%;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:transparent;/*word-wrap:break-word;word-break:break-all;*/}	
+body {-webkit-overflow-scrolling:touch;font-family:Verdana, Microsoft YaHei, Helvetica, Arial, Hiragino Sans GB, sans-serif, Simsun;font-size: 1.4rem;line-height:1.5;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,hr{margin:0;padding:0; }
+table{border-collapse:collapse; border-spacing:0;}
+caption,th{text-align:center;}
+fieldset,img,input,button,abbr{border:0 none;}
+caption,th,cite,code,dfn,em,strong,var,b,i{font-style:normal; font-weight:normal;}
+ol,ul,li{list-style-type:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+input,textarea,optgroup,option,select,button{vertical-align: middle;font:inherit;}	/*文本域默认是不会继承其他字体的样式的，所以设置继承上级字体样式*/
+textarea {resize:none;border: none;}
+button,input[type="button"],input[type="submit"],input[type="reset"] {-webkit-appearance:none;}
+input[type="search"]::-webkit-search-decoration {-webkit-appearance:textfield}
+button,input[type="submit"],input[type="button"] {cursor:pointer;}
+a {text-decoration:none;color:#333;outline:none}
+a:hover{text-decoration:none;}
+a:active{outline:none;}
+:focus {outline:none;border: none;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;margin:0;padding: 0}	/* 设置HTML5元素为块 */
+img {max-width:100%;vertical-align: middle;/*width:100%;width:auto\9; height:auto;*//* ie6 7 8 9 */ }	
+embed,video,object,iframe {width:100%;}
+code, kbd, pre, samp { font-family: monospace;}
+pre{
+    white-space: pre;           /* CSS 2.0 */
+    white-space: pre-wrap;      /* CSS 2.1 */
+    white-space: pre-line;      /* CSS 3.0 */
+    white-space: -pre-wrap;     /* Opera 4-6 */
+    white-space: -o-pre-wrap;   /* Opera 7 */
+    white-space: -moz-pre-wrap !important; /* Mozilla */
+    white-space: -hp-pre-wrap;  /* HP Printers */
+    word-wrap: break-word;      /* IE 5+ */
+ }  
+address {font-style: normal;}
+/*=======CSS reset end=======*/
+
+
+/*=======文字排版 start======*/
+.f10{font-size:1rem;}
+.f12{font-size:1.2rem;}
+.f13{font-size:1.3rem;}
+.f14{font-size:1.4rem;}
+.f15{font-size:1.5rem;}
+.f16{font-size:1.6rem;}
+.f18{font-size:1.8rem;}
+.f20{font-size:2rem;}
+.f22{font-size:2.2rem;}
+.f24{font-size:2.4rem;}
+
+.fwb{font-weight:bold;}
+.fwn{font-weight:normal;}
+
+.unl{text-decoration:underline;}
+.none_unl {text-decoration:none;}
+/*=======文字排版 end======*/
+
+
+/*===========文字颜色==========*/
+.c_red {color: #ff0000}
+.c_blue {color: #7fc1fe}
+.c_orange {color: #ef4135}
+.c_white {color: #fff}
+.gold_color {color: #fdc810}
+.c000{ color:#000;}
+.c333{color:#333;}
+.c666{color:#666;}
+.c999{color:#999;}
+
+/*===========文字颜色 end==========*/
+
+/*=======定位 begin======*/
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+.fl{float:left; display:inline;}
+.fr{float:right; display:inline;}
+.cb{clear:both;}
+.cl{clear:left;}
+.cr{clear:right;}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.vm{vertical-align:middle;}
+.vt{vertical-align:top;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.db {display:block;}
+.dn {display:none;}
+.ib {display:inline-block;vertical-align: middle;}
+.flexbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.flexItem {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.flexCenter  {
+     -webkit-box-align: center; 
+     -ms-flex-align: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.oh {overflow:hidden;}
+.ov {overflow:visible;}
+.oxa {overflow-x:auto }
+.oya {overflow-y:auto }
+
+/*=======定位 end======*/
+
+/*=======长度高度 begin======*/
+
+.w10p{width:10%;}
+.w15p{width:15%;}
+.w20p{width:20%;}
+.w25p{width:25%;}
+.w30p{width:30%;}
+.w33p{width:33%;}
+.w40p{width:40%;}
+.w49p{width:49%;}
+.w50p{width:50%;}
+.w60p{width:60%;}
+.w65p{width:65%;}
+.w70p{width:70%;}
+.w80p{width:80%;}
+.w90p{width:90%;}
+.w100p{width:100%;}
+
+.h100p{height:100%;}
+
+/*=======长度高度 end======*/
+
+/*=======边距 start======*/
+.ma{margin-left:auto; margin-right:auto;}
+.m10{margin:1rem;}
+.m15{margin:15rem;}
+.m30{margin:3rem;}
+
+.mt-5 {margin-top: -.5rem}
+.mt5{margin-top:0.5rem}
+.mt10{margin-top:1rem;}
+.mt15{margin-top:1.5rem;}
+.mt20{margin-top:2rem;}
+.mt30{margin-top:3rem;}
+.mt40{margin-top:4rem;}
+.mt50{margin-top:5rem;}
+.mt100{margin-top:10rem;}
+
+.mb5{margin-bottom:0.5rem;}
+.mb10{margin-bottom:1rem;}
+.mb15{margin-bottom:1.5rem;}
+.mb20{margin-bottom:2rem;}
+.mb30{margin-bottom:3rem;}
+.mb40{margin-bottom:4rem;}
+.mb50{margin-bottom:5rem;}
+.mb100{margin-bottom:10rem;}
+
+.ml5{margin-left:0.5rem;}
+.ml10{margin-left:1rem;}
+.ml15{margin-left:1.5rem;}
+.ml20{margin-left:2rem;}
+.ml30{margin-left:3rem;}
+.ml40{margin-left:4rem;}
+.ml50{margin-left:5rem;}
+
+.mr5{margin-right:0.5rem;}
+.mr10{margin-right:1rem;}
+.mr15{margin-right:1.5rem;}
+.mr20{margin-right:2rem;}
+.mr30{margin-right:3rem;}
+.mr50{margin-right:5rem;}
+
+
+.p10{padding:1rem;}
+.p15{padding:1.5rem;}
+.p20{padding:2rem;}
+.p30{padding:3rem;}
+
+.pt5{padding-top:0.5rem;}
+.pt10{padding-top:1rem;}
+.pt15{padding-top:1.5rem;}
+.pt20{padding-top:2rem;}
+.pt30{padding-top:3rem;}
+.pt50{padding-top:5rem;}
+
+.pb5{padding-bottom:0.5rem;}
+.pb10{padding-bottom:1rem;}
+.pb20{padding-bottom:2rem;}
+.pb30{padding-bottom:3rem;}
+.pb50{padding-bottom:5rem;}
+
+.pl5{padding-left:0.5rem;}
+.pl10{padding-left:1rem;}
+.pl15{padding-left:1.5rem;}
+.pl20{padding-left:2rem;}
+.pl25{padding-left:2.5rem;}
+.pl30{padding-left:3rem;}
+.pl50{padding-left:5rem;}
+
+.pr5{padding-right:0.5rem;}
+.pr10{padding-right:1rem;}
+.pr15{padding-right:1.5rem;}
+.pr20{padding-right:2rem;}
+.pr25{padding-right:2.5rem;}
+.pr30{padding-right:3rem;}
+.pr50{padding-right:5rem;}
+/*=======边距 end======*/

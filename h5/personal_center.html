@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>一百点触屏版</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body class="body_bg">
+    <div id="wrap">
+        <header id="header">
+            <a href="javascript:history.go(-1);" class="go_back"></a>
+            <h1>个人中心</h1>
+            <a href="index.html" class='header_right home_ico'></a>
+        </header>
+        <div id="content"> 
+            <section class="pt10">
+                <ul class="flexbox cell_box">
+                    <li class="flexItem">
+                        <p class="f12 c666">推荐人数</p><strong class="c_blue">123</strong>
+                    </li>
+                    <li class="flexItem">
+                        <p class="f12 c666">平台最高提成</p><strong class="c_blue">¥2123</strong>
+                    </li>
+                    <li class="flexItem">
+                        <p class="f12 c666">投资项目数</p><strong class="c_blue">2个</strong>
+                    </li>
+                </ul>
+            </section>
+            <section class="pt10">
+                <ul class="ui_list">
+                    <li class="flexbox">
+                        <label class="c666">用户名</label>
+                        <div class="flexItem tr">微微之海</div>
+                    </li>
+                    <li class="flexbox">
+                        <label class="c666">手机号</label>
+                        <div class="flexItem tr">13800138000</div>
+                    </li>
+                </ul>  
+            </section>
+            <section class="pt10">
+                <ul class="ui_list">
+                    <li>
+                        <a href="#" class="right_arrow c666">投资人认证</a>
+                    </li>
+                    <li>
+                        <a href="javascript:showDialog('images/qrcode.png','http://wap.gdrrc.com.cn');" class="right_arrow c666">推广链接</a>
+                    </li>
+                    <li>
+                        <a href="javascript:showDialog('images/qrcode.png','http://wap.gdrrc.com.cn?id=123');" class="right_arrow c666">红包链接</a>
+                    </li>
+                    <li>
+                        <a href="javascript:showDialog('images/qrcode.png','http://wap.gdrrc.com.cn?id=10086');" class="right_arrow c666">抽奖链接</a>
+                    </li>
+                </ul>  
+            </section>
+            <section class="pt10">
+                <ul class="ui_list">
+                    <li>
+                        <a href="#" class="right_arrow c666"><img src="images/icon/u1.png" class="user_center_img">店铺</a>
+                    </li>
+                    <li>
+                        <a href="#" class="right_arrow c666"><img src="images/icon/u2.png" class="user_center_img">资金管理</a>
+                    </li>
+                    <li>
+                        <a href="#" class="right_arrow c666"><img src="images/icon/u3.png" class="user_center_img">动态</a>
+                    </li>
+                    <li>
+                        <a href="#" class="right_arrow c666"><img src="images/icon/u4.png" class="user_center_img">评论</a>
+                    </li>
+                    <li>
+                        <a href="#" class="right_arrow c666"><img src="images/icon/u5.png" class="user_center_img">粉丝</a>
+                    </li>
+                    <li>
+                        <a href="#" class="right_arrow c666"><img src="images/icon/u6.png" class="user_center_img">关注</a>
+                    </li>
+                    <li>
+                        <a href="feedback.html" class="right_arrow c666"><img src="images/icon/u7.png" class="user_center_img">意见反馈</a>
+                    </li>
+                </ul>  
+            </section>    
+        </div>
+        <footer class="p10">
+            <button class="btn blue_btn w100p">退出登录</button>
+        </footer>
+    </div>
+
+    <!--遮罩-->
+    <div id="mask" style="display:none"></div>
+    <div class="center_dialog" style="display:none;width:80%" id="dialog">
+        <div class="dialog_inner">
+            <figure class="code_box tc"><img src="" alt="个人推荐码" class="codeImg"></figure>
+            <p class="url_text"></p>
+            <a href="javascript:closeMask('#mask,#dialog');" class="close_ico" title="关闭"></a>
+        </div>
+    </div>
+
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+    function showDialog(src,href){
+        $('#mask, #dialog').show();
+        $('.codeImg').attr('src',src);
+        $('.url_text').text(href);
+    }
+
+</script>
+</body>
+</html>

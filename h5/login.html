@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>一百点触屏版</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body class="body_bg">
+    <div id="wrap">
+        <header id="header">
+            <a href="javascript:history.go(-1);" class="go_back"></a>
+            <h1>登录</h1>
+            <a href="register.html" class='header_right'>创建账户</a>
+        </header>
+        <div id="content"> 
+            <form method="post" action="login.php" class="bg_white">
+                <ul class="login_form">
+                  <li class="flexbox">
+                      <span class="flexCenter"><i class="user_ico"></i></span>
+                      <div class="flexItem"><input class="w100p" type="text" placeholder="手机/邮箱号" name="phoneNumber"></div>
+                  </li>
+                  <li class="flexbox">
+                      <span class="flexCenter"><i class="pwd_ico"></i></span>
+                      <div class="flexItem">
+                          <input class="w100p" type="password" placeholder="输入密码" name="password">
+                      </div>
+                  </li>
+                </ul>
+                <aside class="p30">
+                    <div class="mb20 c666">
+                        <label class="ib biz_checkbox"><input type="checkbox" hidden checked><i></i><b>记住帐号</b></label>
+                        <label class="ib biz_checkbox ml20"><input type="checkbox" hidden><i></i><b>自动登录</b></label>
+                    </div>
+                    <input type="submit" value="登录" class="btn blue_btn w100p mb20">
+                    <a href="tel:400-9220-889" class="btn orange_btn w100p mb20">电话咨询</a>
+                </aside>
+            </form>
+        </div>
+    </div>
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
